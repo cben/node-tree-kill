@@ -79,6 +79,7 @@ function killAll (tree, signal, callback) {
 
 function killPid(pid, signal) {
     try {
+        console.log('tree-kill: sending ' + signal + ' to process ' + pid);
         process.kill(parseInt(pid, 10), signal);
     }
     catch (err) {
